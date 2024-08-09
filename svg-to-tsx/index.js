@@ -9,7 +9,7 @@ const REGEX_WIDTH = /width=\"(.*?)\"/g;
 const REGEX_HEIGHT = /height=\"(.*?)\"/g;
 const REGEX_FILL = /fill=\"(.*?)\"/g;
 
-const templateFirstLine = `export default ({ size = 20, color = "white" }: { size: number; color: string }) => (`;
+const templateFirstLine = `export default ({ size = 20, color = "white" }: { size?: number; color?: string }) => (`;
 const templateLastLine = `);`;
 
 async function iterateFilesInDirectory(dirPath) {
