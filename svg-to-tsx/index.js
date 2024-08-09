@@ -38,6 +38,7 @@ async function iterateFilesInDirectory(dirPath) {
   } catch (err) {
     console.error("Could not list the directory.", err);
   } finally {
+    await fs.writeFile(COPY_FILE_PATH, "");
     process.exit(1);
   }
 }
