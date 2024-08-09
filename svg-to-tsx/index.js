@@ -37,6 +37,7 @@ async function iterateFilesInDirectory(dirPath) {
     }
   } catch (err) {
     console.error("Could not list the directory.", err);
+  } finally {
     process.exit(1);
   }
 }
@@ -45,4 +46,5 @@ if (targetDir) {
   iterateFilesInDirectory(targetDir);
 } else {
   console.error("Please provide a directory path as the first arg");
+  process.exit(1);
 }
